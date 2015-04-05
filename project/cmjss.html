@@ -1,0 +1,30 @@
+    <head>
+        <title>cmjss</title>
+    </head>
+
+    <body>
+        <h1>Welcome to Meteor!</h1>
+
+
+        <button id="bt1">Increment Me</button>
+        <button id="bt2">Decrement Me</button>
+        <p>You've pressed the button {{counter}} times.</p>
+        <section id="content">
+            <hr><p>Conten Section</p>
+            <p>Contentname:</p><input id="contentName" type="text" name="content" />
+            <p>Content:</p>
+            <textarea id="contentId" name="content" wrap="hard" cols="30" rows="6">{{contentText}}</textarea>
+            {{content_id}}
+            
+        </section>
+
+        <ul>
+            {{#each contents}}
+            {{> content}}
+            {{/each}}
+        </ul>
+    </body>
+
+<template name="content">
+    <p><button class="delete">Delete</button><button class="edit">Edit</button>{{{text}}}</p>
+</template>
